@@ -10,23 +10,23 @@ title: Student Directory
     {% assign username = user_hash[0] %}
     {% assign user = user_hash[1] %}
 
-    <div class="col-md-12 student" data-username="{{username}}">
-
-        <img class="avatar" src=""/>
-        <div class="info">
-          <div>
-            <a href="https://github.com/{{ username }}"><span class="gh-username">@{{ username }}</span></a>
-            {% assign emoji = user.emoji | replace:':','' | replace:'+','--' %}
-            <i class="em em-{{ emoji }}"></i>
-          </div>
-          <div>
-            <span class="name"></span>
-          </div>
-          <p>
-            {{ user.introduction }}
-          </p>
+    <div class="row student" data-username="{{username}}">
+      <div class="col-sm-3">
+        <img class="avatar img-responsive" src=""/>
+      </div>
+      <div class="col-sm-9 info">
+        <div>
+          <a href="https://github.com/{{ username }}"><span class="gh-username">@{{ username }}</span></a>
+          {% assign emoji = user.emoji | replace:':','' | replace:'+','--' %}
+          <i class="em em-{{ emoji }}"></i>
         </div>
-
+        <div>
+          <span class="name">{{user.name}}</span>
+        </div>
+        <div>
+          {{ user.introduction }}
+        </div>
+      </div>
     </div>
   {% endfor %}
 </div>
