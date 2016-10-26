@@ -9,4 +9,4 @@ puts 'what is the temp in degrees fahrenheit?'
 degrees=gets.to_f
 var2= (degrees.to_f - 32.0) / (9.0/5.0)
 puts 'It is ' +var2.to_s+ 'degrees celcius!'
-puts 'Thanks for stopping by!'
+puts 'Thanks for stopping by!' 
